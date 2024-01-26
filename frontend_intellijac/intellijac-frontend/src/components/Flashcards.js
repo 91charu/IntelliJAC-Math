@@ -42,10 +42,12 @@ function Flashcards () {
     const onInputChange = (e) => {
         setFlashcard({...flashcard, [e.target.name]: e.target.value});
     };
+
 //    const onSubmit = async (e) => {
 //        //e.preventDefault();
 //        await axios.post("http://localhost:8080/flashcards/flashcard", flashcard);
 //    };
+
 const onSubmit = async (e) => {
     e.preventDefault();
 

@@ -30,7 +30,7 @@ function Registerforms() {
     // Basic client-side validation
     let newErrors = {};
     if (!employeename.trim()) {
-      newErrors = { ...newErrors, employeename: 'Please enter the employee name.' };
+      newErrors = { ...newErrors, employeename: 'Please enter the user name.' };
     }
 
     if (!email.trim()) {

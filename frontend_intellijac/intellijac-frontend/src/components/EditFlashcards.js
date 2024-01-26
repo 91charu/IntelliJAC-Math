@@ -22,10 +22,23 @@ function EditFlashcards() {
         loadFlashcard()
     }, []);
 
-    const onSubmit = async (e) => {
-        
+//    const onSubmit = async (e) => {
+//
+//        await axios.put(`http://localhost:8080/flashcards/flashcard/${id}`, flashcard);
+//    };
+
+const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
         await axios.put(`http://localhost:8080/flashcards/flashcard/${id}`, flashcard);
-    };
+
+        console.log("Flashcard updated successfully");
+    } catch (error) {
+        console.error("Error updating flashcard:", error);
+
+    }
+};
+
 
     const loadFlashcard = async ()=>{
         const result=await axios.get(`http://localhost:8080/flashcards/flashcard/${id}`)
@@ -33,35 +46,31 @@ function EditFlashcards() {
     }
 
     return (
-        <div style={{backgroundColor:"#FFF5EE"}}>
+        <div style= {{backgroundColor: "#E5D3B3"}}>
             <br></br>
             <br></br>
-            <h1 style={{color:"#008B8B"}}><b>Edit your math flashcards here!</b></h1>
-            <form onSubmit={(e) => onSubmit(e)}> 
-                <div style={{fontSize: "25px", marginLeft:"40px", marginRight:"40px"}}>
-                <label for="flashcard-name"><b> Your question</b></label>
+            <h1 style= {{ fontSize: "50px", color: "orange"}}>Edit Your Math Flashcards Here!!</h1>
+            <form onSubmit={(e) => onSubmit(e)}>
+                <div style= {{textAlign: "center", fontSize: "30px"}}>
+                <label for="flashcard-name"> Your question:</label>
                 </div>
-                <div style={{marginLeft:"40px", marginRight:"40px"}}>
-                <input type="text" id="flashcard-name" name="name" placeholder="Your flashcard's title" onChange={(e) => onInputChange(e)} value={name}/>
+                <div>
+                <input type="text" id="flashcard-name" name="name" placeholder="Your flashcard's title" style= {{ marginLeft: "625px", fontSize: "20px", textAlign: "center" }} onChange={(e) => onInputChange(e)} value={name}/>
                 </div>
-                <br></br>
-                <div style={{fontSize: "25px", marginLeft:"40px", marginRight:"40px"}}>
-                <label for="flashcard-description"><b> Your answer </b></label>
+                <br />
+                <div style= {{textAlign: "center", fontSize: "30px"}}>
+                <label for="flashcard-description"> Your answer:</label>
                 </div>
-                <div style={{marginLeft:"40px", marginRight:"40px"}}>
-                <textarea type="text" className="form-control" id="flashcard-description" name="description" placeholder="Your flascard's text" onChange={(e) => onInputChange(e)} value={description}/>
+                <div>
+                <textarea type="text" id="flashcard-description" name="description" placeholder="Your flascard's text" style= {{ marginLeft: "625px", fontSize: "20px", textAlign: "center" }} onChange={(e) => onInputChange(e)} value={description}/>
                 </div>
-                <div style={{marginLeft:"40px", marginRight:"40px"}}>
-                <br></br>
-                <button className="btn btn-outline-primary mx-2" type="submit"><b> Edit your flashcard! </b></button>
-                </div>
+                <br />
+                <button style= {{marginLeft: "660px", fontSize: "20px", color: "purple"}} type="submit"> Edit your flashcard!</button>
             </form>
-            <br></br>
-            <div>
-            <Link className="btn btn-outline-primary mx-2" style={{backgroundColor: "#CD5C5C"}} to="/flashcards">
-              <b style={{color:"white"}}>Back to Flashcard list!</b>
+            <br />
+            <Link className="btn btn-outline-primary mx-2" to="/flashcards">
+              Back to Flashcard list!
               </Link>
-              </div>
         </div>
 
     // {/* // return (

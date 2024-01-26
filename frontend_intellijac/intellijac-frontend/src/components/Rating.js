@@ -56,23 +56,15 @@ function Ratings() {
 
                 {/* added link to comment box */}
                 <br></br>
-                <Link className="btn btn-outline-primary mx-2" to={"/userComment/"}>
-                    Please leave comments about our app    
-                </Link>
+                <p> Do you wish to leave a comment about our app?? If so, then please <Link to={"/userComment/"} > click here!!
+
+
+                </Link></p>
 
              <Link to="/">Go to HomePage</Link>
 
 
-                   
-
-                
-                
-            
             </div>
-
-
-
-
 
     );
 

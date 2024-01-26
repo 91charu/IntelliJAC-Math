@@ -124,7 +124,7 @@ function ContactForms() {
             type="description"
             id="contactform-description"
             name="description"
-            placeholder="Your Message"
+            placeholder="Description"
             onChange={(e) => onInputChange(e)}
             value={description}
             className="form-input"

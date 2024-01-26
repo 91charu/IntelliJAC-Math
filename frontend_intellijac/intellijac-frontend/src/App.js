@@ -67,6 +67,7 @@ function Home() {
       <WelcomeContent />
       <Buttons />
       <ContactButton />
+      <br />
       <TeamButton />
       <NumberButton />
 
