@@ -7,7 +7,7 @@ public class Flashcard {
 
     @Id
     //@GeneratedValue (strategy = GenerationType.IDENTITY)
-    @GeneratedValue
+    //@GeneratedValue
     private Long id;
 
     // TODO: add validation

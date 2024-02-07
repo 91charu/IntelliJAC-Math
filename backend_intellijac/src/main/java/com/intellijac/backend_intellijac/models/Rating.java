@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Rating {
 
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     private int id;
 
     @Column(name = "user_rating")

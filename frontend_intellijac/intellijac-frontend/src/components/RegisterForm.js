@@ -61,7 +61,7 @@ function Registerforms() {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        Cookie: 'JSESSIONID=34C0FC47259901941230FFEA19A7C63A',
+        //Cookie: 'JSESSIONID=34C0FC47259901941230FFEA19A7C63A',
       },
       data: JSON.stringify(data),
     };

@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Contact {
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     private int id;
 
     private String name;

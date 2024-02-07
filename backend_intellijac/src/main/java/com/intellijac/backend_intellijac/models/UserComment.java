@@ -11,7 +11,7 @@ import java.util.Objects;
 public class UserComment {
 
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     private Long id;
 
     @Column(name = "user_name")
