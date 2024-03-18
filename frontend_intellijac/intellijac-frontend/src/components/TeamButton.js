@@ -7,7 +7,7 @@ const ContactButton = () => {
     <div>
         <div style={{ marginLeft: "1000px", marginBottom: "80px", marginTop: "-150px", marginRight: "80px" }}>
           <Link to="/api/team" >
-            <h2>Meet Our Team!!</h2>
+            <h2>Meet The Developer!!</h2>
           </Link>
         </div>
       </div>
